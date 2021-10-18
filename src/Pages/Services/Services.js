@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+import { CardGroup } from 'react-bootstrap';
 import Service from './Service/Service';
+import './Services.css'
 
 const Services = () => {
     const [services, setServices] = useState([])
@@ -9,13 +11,16 @@ const Services = () => {
             .then(data => setServices(data))
     }, [])
     return (
-        <div>
-            {
-                services.map(service => <Service
-                    key={service.id}
-                    service={service}
-                ></Service>)
-            }
+        <div className="container">
+            <h1 className="color-b text-center mt-5">Our Services</h1>
+            <CardGroup className="row">
+                {
+                    services.map(service => <Service
+                        key={service.id}
+                        service={service}
+                    ></Service>)
+                }
+            </CardGroup>
         </div>
     );
 };

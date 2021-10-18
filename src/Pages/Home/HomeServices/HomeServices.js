@@ -11,7 +11,7 @@ const HomeServices = () => {
     }, [])
     return (
         <div className="container">
-            <h1 className="color-b text-center mt-5">Our Services</h1>
+            <h1 className="color-b text-center my-5">Our Services</h1>
             <CardGroup className="row">
                 {
                     services.map(service => <HomeService

@@ -1,11 +1,17 @@
+import { faCalendarCheck } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react';
 
-const Doctor = (props) => {
-    const { name, img } = props.doctor;
+const Doctor = ({ doctor }) => {
+    const { name, designation, degree, phone, img } = doctor;
     return (
-        <div>
-            <h6>{name}</h6>
-            <img src={img} alt="" />
+        <div className="doctor-cart mx-4 my-4 p-4">
+            <img src={img} className="img-fluid doctor-profile" alt="" />
+            <h4 className="color-b">{name}</h4>
+            <p className="fw-bold">{designation}</p>
+            <p>{degree}</p>
+            <p>{phone}</p>
+            <button className="btn btn-a text-white"> <FontAwesomeIcon icon={faCalendarCheck} />  Get Appointment</button>
         </div>
     );
 };

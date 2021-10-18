@@ -11,7 +11,7 @@ const HomeDoctors = () => {
     }, [])
     return (
         <div className="container">
-            <h1 className="color-b text-center">Our Doctors</h1>
+            <h1 className="color-b text-center my-5">Our Doctors</h1>
             <div className="grid text-center">
                 {
                     doctors.map(doctor => <HomeDoctor
