@@ -1,0 +1,20 @@
+.logo img{
+    width: 30px;
+}
+
+.color-a{
+    color: #03c962;
+}
+.color-a:hover{
+    color: #02A551;
+}
+
+.color-b{
+    color: #0095DA;
+}
+.color-b:hover{
+    color: #045EC5
+}
+.nav-menu{
+    text-decoration: none;
+}

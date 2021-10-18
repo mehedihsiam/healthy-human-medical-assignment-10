@@ -1,0 +1,74 @@
+[
+    {
+        "id": 1,
+        "name": "Dr Susmi",
+        "designation": "Asst. Prof",
+        "degree": "MBBS , FCPS (Surgery)",
+        "phone": "+8801953387415",
+        "img": "https://i.ibb.co/WBr5dNm/dr-susmi.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Dr Merry",
+        "designation": "Asst. Prof",
+        "degree": "MBBS , FCPS (Surgery)",
+        "phone": "+8801953387415",
+        "img": "https://i.ibb.co/rcbpZFJ/dr-merry.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Dr Karina",
+        "designation": "Asst. Prof",
+        "degree": "MBBS , FCPS (Surgery)",
+        "phone": "+8801953387415",
+        "img": "https://i.ibb.co/5vZbpnQ/dr-karina.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Dr John",
+        "designation": "Asst. Prof",
+        "degree": "MBBS , FCPS (Surgery)",
+        "phone": "+8801953387415",
+        "img": "https://i.ibb.co/Sc1dt13/dr-john.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Dr Eva",
+        "designation": "Asst. Prof",
+        "degree": "MBBS , FCPS (Surgery)",
+        "phone": "+8801953387415",
+        "img": "https://i.ibb.co/P1s4z3b/dr-eva.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Dr Ema",
+        "designation": "Asst. Prof",
+        "degree": "MBBS , FCPS (Surgery)",
+        "phone": "+8801953387415",
+        "img": "https://i.ibb.co/71rFRGd/dr-ema.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Dr Ariana",
+        "designation": "Asst. Prof",
+        "degree": "MBBS , FCPS (Surgery)",
+        "phone": "+8801953387415",
+        "img": "https://i.ibb.co/n7hgdCY/dr-ariana.jpg"
+    },
+    {
+        "id": 8,
+        "name": "Dr Alia",
+        "designation": "Asst. Prof",
+        "degree": "MBBS , FCPS (Surgery)",
+        "phone": "+8801953387415",
+        "img": "https://i.ibb.co/8rhJmVt/dr-alia.jpg"
+    },
+    {
+        "id": 9,
+        "name": "Dr Abdallah",
+        "designation": "Asst. Prof",
+        "degree": "MBBS , FCPS (Surgery)",
+        "phone": "+8801953387415",
+        "img": "https://i.ibb.co/4JnWcVZ/dr-abdallah.jpg"
+    }
+]

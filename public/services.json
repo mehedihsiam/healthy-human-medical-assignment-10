@@ -1,0 +1,86 @@
+[
+    {
+        "id": "1",
+        "name": "Home Service in COVID-19 Situation",
+        "description": "In covid19 setuation, we are providing doctor's services at home. You may get a appointment with doctor at Online and get suggestion from home. 'STAY HOME, STAY SAFE'",
+        "contact": "+8801953387415",
+        "img": "https://i.ibb.co/pjSQnzp/covid.jpg"
+    },
+    {
+        "id": "2",
+        "name": "Ward/Cabin services",
+        "description": "We have premium quality Cabin/Ward. 'STAY HOME, STAY SAFE'",
+        "contact": "+8801953387415",
+        "img": "https://i.ibb.co/CKJb5bC/Cabin-2.jpg"
+    },
+    {
+        "id": "3",
+        "name": "Emergency",
+        "description": "Trauma and non-trauma medical and surgical emergencies round the clock at the ground floor in level-1 of the hospital with a separate entrance. 'STAY HOME, STAY SAFE'",
+        "contact": "+8801953387415",
+        "img": "https://i.ibb.co/kqH6s9m/emergency-2.jpg"
+    },
+    {
+        "id": "4",
+        "name": "Obstetrics and Gynae",
+        "description": "We have established a comprehensive gynecology and obstetrics department that is known as MOMOTA in A-block(5th floor). 'STAY HOME, STAY SAFE'",
+        "contact": "+8801953387415",
+        "img": "https://i.ibb.co/XSVzq9X/Obstetrics-and-Gynae-2.jpg"
+    },
+    {
+        "id": "5",
+        "name": "Stroke ICU with full support",
+        "description": "Stroke Unit, under direct supervision of Prof. M. A. Hayee, who is the pioneer in Neuro-Intervention in Bangladesh, provides neurological treatment for the patients with diversified number of neurological disease like diseases of brain (stroke/infection), diseases of spinal cord etc.",
+        "contact": "+8801953387415",
+        "img": "https://i.ibb.co/nmyMmmJ/Stroke-ICU-2.jpg"
+    },
+    {
+        "id": "6",
+        "name": "NICU",
+        "description": "NICU provides the most comprehensive care for newborns in Bangladesh. It is the major neonatal referral centre.",
+        "contact": "+8801953387415",
+        "img": "https://i.ibb.co/WgPQ0SM/NICU-2.jpg"
+    },
+    {
+        "id": "7",
+        "name": "PICU",
+        "description": "Paediatric Intensive care unit (PICU) is a highly specialized unit which provides intensive care of critically sick children from 1 month to 16 years of age.",
+        "contact": "+8801953387415",
+        "img": "https://i.ibb.co/BjC3r75/PICU-2.jpg"
+    },
+    {
+        "id": "8",
+        "name": "BLOOD BANK",
+        "description": "Government registered hospital blood bank in Dhaka. Providing 24-hour service, most secure blood transfusion policy, and we maintain quality in every stride.",
+        "contact": "+8801953387415",
+        "img": "https://i.ibb.co/4JmJZxR/blood-bank.jpg"
+    },
+    {
+        "id": "9",
+        "name": "Dialysis",
+        "description": "We are having well established Dialysis Center Since 1980, which is situated in the 2nd floor of A block.",
+        "contact": "+8801953387415",
+        "img": "https://i.ibb.co/kxDFgFs/Dialysis.jpg"
+    },
+    {
+        "id": "10",
+        "name": "Surgery",
+        "description": "We ensure about all types of surgery support of modern technology including C-arm, Operating microscope, Arthroscopy etc.",
+        "contact": "+8801953387415",
+        "img": "https://i.ibb.co/x7QpD1b/Surgery.jpg"
+    },
+    {
+        "id": "11",
+        "name": "Cardiac Center",
+        "description": "Cardiac problems are very common now a days all over the world. It is also the number one cause of morbidity and mortality in Bangladesh.",
+        "contact": "+8801953387415",
+        "img": "https://i.ibb.co/zStWMnG/Cardiac-Center-2.jpg"
+    },
+    {
+        "id": "12",
+        "name": "Oncology",
+        "description": "This units has 8 cabin and 5 beds with specially trained doctors and nurses and giving 24 hours service for indoor and out-door (OPD basis) cancer patients.",
+        "contact": "+8801953387415",
+        "img": "https://i.ibb.co/6vDzV2q/Oncology-2.jpg"
+    }
+]
