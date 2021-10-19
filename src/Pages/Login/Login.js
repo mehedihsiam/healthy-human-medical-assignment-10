@@ -9,7 +9,6 @@ import useAuth from '../../hooks/useAuth';
 const Login = () => {
     const { signinUsingGoogle } = useAuth();
     const location = useLocation();
-    console.log(location.state?.from);
     const history = useHistory();
     const redirect_url = location.state?.from || '/home'
     const loginBtn = <FontAwesomeIcon icon={faSignInAlt} />

@@ -10,7 +10,7 @@ import Contact from './Pages/Contact/Contact';
 import Footer from './Shared/Footer/Footer';
 import Appointment from './Pages/Booking/Appointment/Appointment';
 import Login from './Pages/Login/Login';
-import ServiceDetails from './Pages/Details/ServiceDetails/ServiceDetails';
+import ServiceDetails from './Pages/Services/ServiceDetails/ServiceDetails'
 import Register from './Pages/Register/Register';
 import AuthProvider from './context/authProvider';
 import PrivateRoute from './PrivateRoute/PrivateRoute';
