@@ -39,9 +39,7 @@ const useFirebase = () => {
     // set name
     const userName = () => {
         updateProfile(auth.currentUser, { displayName: name })
-            .then(result => {
-                console.log(result.user)
-            })
+            .then(result => { })
 
     }
 

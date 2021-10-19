@@ -1,9 +1,6 @@
-import Button from '@restart/ui/esm/Button';
-import React, { useState } from 'react';
+import React from 'react';
 import { Form } from 'react-bootstrap';
 import { Link, useHistory, useLocation } from 'react-router-dom';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
@@ -11,7 +8,6 @@ const Login = () => {
     const location = useLocation();
     const history = useHistory();
     const redirect_url = location.state?.from || '/home'
-    const loginBtn = <FontAwesomeIcon icon={faSignInAlt} />
 
     const handleGoogleLogin = () => {
         signinUsingGoogle()
