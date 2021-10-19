@@ -1,4 +1,4 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../firebase/firebase.init";
 
@@ -26,6 +26,7 @@ const useFirebase = () => {
     const handleRegistration = (e) => {
         e.preventDefault()
         signUpWithEmail()
+        userName()
     }
     const handleLoginWithEmail = (e) => {
         e.preventDefault()
@@ -34,6 +35,15 @@ const useFirebase = () => {
 
     // firebase Functions
     const auth = getAuth()
+
+    // set name
+    const userName = () => {
+        updateProfile(auth.currentUser, { displayName: name })
+            .then(result => {
+                console.log(result.user)
+            })
+
+    }
 
     // signup with email and password
     const signUpWithEmail = () => {
