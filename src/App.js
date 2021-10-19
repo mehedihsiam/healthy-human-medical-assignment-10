@@ -13,6 +13,7 @@ import Login from './Pages/Login/Login';
 import ServiceDetails from './Pages/Details/ServiceDetails/ServiceDetails';
 import Register from './Pages/Register/Register';
 import AuthProvider from './context/authProvider';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 
 function App() {
@@ -42,12 +43,12 @@ function App() {
           <Route exact path="/register">
             <Register></Register>
           </Route>
-          <Route path="/serviceDetails/:serviceID">
+          <PrivateRoute path="/serviceDetails/:serviceID">
             <ServiceDetails></ServiceDetails>
-          </Route>
-          <Route path="/appointment/:appointmentID">
+          </PrivateRoute>
+          <PrivateRoute path="/appointment/:appointmentID">
             <Appointment></Appointment>
-          </Route>
+          </PrivateRoute>
           <Route path="*">
             <NotFound></NotFound>
           </Route>

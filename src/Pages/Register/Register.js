@@ -1,10 +1,28 @@
+import { getAuth } from '@firebase/auth';
 import Button from '@restart/ui/esm/Button';
-import React from 'react';
+import React, { useState } from 'react';
 import { Form } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import useAuth from '../../hooks/useAuth';
 
 
 const Register = () => {
+    const { signinWithEmailAndPassword } = useAuth()
+
+
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
+    const handleEmail = (e) => {
+        setEmail(e.target.value)
+    }
+    const handlePassword = (e) => {
+        setPassword(e.target.value)
+    }
+
+    const emailSignUp = () => {
+        // signinWithEmailAndPassword()
+    }
     return (
         <div className="container text-center">
             <div className="row">
@@ -21,7 +39,7 @@ const Register = () => {
                         <Form.Group className="mb-3" controlId="formBasicPassword">
                             <Form.Control type="password" placeholder="Password" />
                         </Form.Group>
-                        <Button variant="primary" type="submit" className="btn btn-a text-white">
+                        <Button variant="primary" type="submit" className="btn btn-a text-white" >
                             Signup
                         </Button>
                     </Form>
@@ -34,5 +52,4 @@ const Register = () => {
         </div>
     );
 };
-
 export default Register;

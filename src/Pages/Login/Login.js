@@ -1,14 +1,26 @@
 import Button from '@restart/ui/esm/Button';
-import React from 'react';
+import React, { useState } from 'react';
 import { Form } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
     const { signinUsingGoogle } = useAuth();
+    const location = useLocation();
+    console.log(location.state?.from);
+    const history = useHistory();
+    const redirect_url = location.state?.from || '/home'
     const loginBtn = <FontAwesomeIcon icon={faSignInAlt} />
+
+    const handleGoogleLogin = () => {
+        signinUsingGoogle()
+            .then(result => {
+                history.push(redirect_url)
+            })
+    }
+
 
     return (
         <div className="container text-center">
@@ -32,7 +44,7 @@ const Login = () => {
                     </Form>
                     <br />
                     <p>Or</p>
-                    <button className="btn btn-warning" onClick={signinUsingGoogle}>Login with Google</button>
+                    <button className="btn btn-warning" onClick={handleGoogleLogin}>Login with Google</button>
                     <p className="my-4">New User?<Link to="/register"> Register</Link></p>
                 </div>
             </div>
