@@ -14,7 +14,7 @@ const Doctors = () => {
             <div className="grid text-center">
                 {
                     doctors.map(doctor => <Doctor
-                        key={doctor.key}
+                        key={doctor.id}
                         doctor={doctor}
                     ></Doctor>)
                 }

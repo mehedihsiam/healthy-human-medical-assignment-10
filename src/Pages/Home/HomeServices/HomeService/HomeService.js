@@ -6,9 +6,10 @@ import { Card } from 'react-bootstrap';
 // fontawesome icon
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons'
+import { Link } from 'react-router-dom';
 
 const HomeService = ({ service }) => {
-    const { name, description, contact, img } = service;
+    const { id, name, description, contact, img } = service;
     return (
         <div className="col-md-4 my-3">
             <Card>
@@ -20,7 +21,9 @@ const HomeService = ({ service }) => {
                     </Card.Text>
                     <h6 className="color-b">{contact}</h6>
                 </Card.Body>
-                <Button className="btn btn-a text-white"><FontAwesomeIcon icon={faInfoCircle} /> Details</Button>
+                <Link to={`/serviceDetails/${id}`} className="text-center my-2">
+                    <Button className="btn btn-a text-white"><FontAwesomeIcon icon={faInfoCircle} /> Details</Button>
+                </Link>
             </Card>
         </div>
     );
