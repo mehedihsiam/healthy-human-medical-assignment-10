@@ -1,17 +1,69 @@
-import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithPopup, GoogleAuthProvider, signOut, onAuthStateChanged, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import { useEffect, useState } from "react";
 import initializeAuthentication from "../firebase/firebase.init";
 
 initializeAuthentication()
 const useFirebase = () => {
     const [users, setUsers] = useState({});
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+    const [error, setError] = useState('')
 
+    // collect inputs
+    const handleNameChange = (e) => {
+        setName(e.target.value)
+    }
+
+    const handleEmailChange = (e) => {
+        setEmail(e.target.value)
+    }
+
+    const handlePasswordChange = (e) => {
+        setPassword(e.target.value)
+    }
+
+    const handleRegistration = (e) => {
+        e.preventDefault()
+        signUpWithEmail()
+    }
+    const handleLoginWithEmail = (e) => {
+        e.preventDefault()
+        signInWithEmail()
+    }
+
+    // firebase Functions
     const auth = getAuth()
+
+    // signup with email and password
+    const signUpWithEmail = () => {
+        createUserWithEmailAndPassword(auth, email, password)
+            .then(result => {
+                const user = result.user;
+                setUsers(user)
+            })
+            .catch((error) => {
+                const errorMessege = error.messege;
+                setError(errorMessege)
+            })
+    }
+
+
+    const signInWithEmail = () => {
+        signInWithEmailAndPassword(auth, email, password)
+            .then(result => {
+                const user = result.user;
+                setUsers(user)
+            })
+            .catch((error) => {
+                const errorMessege = error.messege;
+                setError(errorMessege)
+            })
+    }
+
     const signinUsingGoogle = () => {
         const googleProvider = new GoogleAuthProvider();
         return signInWithPopup(auth, googleProvider)
-
-
     }
 
 
@@ -36,7 +88,14 @@ const useFirebase = () => {
     return {
         users,
         signinUsingGoogle,
-        logOut
+        logOut,
+        handleNameChange,
+        signUpWithEmail,
+        handleEmailChange,
+        handlePasswordChange,
+        handleRegistration,
+        handleLoginWithEmail,
+        error
     }
 }
 

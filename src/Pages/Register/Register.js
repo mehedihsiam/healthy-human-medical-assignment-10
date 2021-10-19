@@ -7,41 +7,25 @@ import useAuth from '../../hooks/useAuth';
 
 
 const Register = () => {
-    const { signinWithEmailAndPassword } = useAuth()
-
-
-    const [email, setEmail] = useState('')
-    const [password, setPassword] = useState('')
-
-    const handleEmail = (e) => {
-        setEmail(e.target.value)
-    }
-    const handlePassword = (e) => {
-        setPassword(e.target.value)
-    }
-
-    const emailSignUp = () => {
-        // signinWithEmailAndPassword()
-    }
+    const { signUpWithEmail, handleRegistration, error, handleEmailChange, handlePasswordChange } = useAuth()
     return (
         <div className="container text-center">
             <div className="row">
                 <div className="col-md-4 mx-auto my-5">
                     <h3 className="color-b">Healthy Human Medical</h3>
-                    <Form className="my-4">
+                    <Form className="my-4" onSubmit={handleRegistration}>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Control type="email" placeholder="Enter email" />
+                            <Form.Control type="email" placeholder="Enter email" onBlur={handleEmailChange} />
                             <Form.Text className="text-muted">
                                 We'll never share your email with anyone else.
                             </Form.Text>
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Control type="password" placeholder="Password" />
+                            <Form.Control type="password" placeholder="Password" onBlur={handlePasswordChange} />
                         </Form.Group>
-                        <Button variant="primary" type="submit" className="btn btn-a text-white" >
-                            Signup
-                        </Button>
+                        <input type="submit" value="Sign Up" className="btn btn-a text-white" />
+                        <p>{error}</p>
                     </Form>
                     <br />
                     <p>Or</p>

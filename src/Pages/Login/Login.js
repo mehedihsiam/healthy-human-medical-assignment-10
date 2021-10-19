@@ -7,7 +7,7 @@ import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 import useAuth from '../../hooks/useAuth';
 
 const Login = () => {
-    const { signinUsingGoogle } = useAuth();
+    const { signinUsingGoogle, handleLoginWithEmail, handleEmailChange, handlePasswordChange, error } = useAuth();
     const location = useLocation();
     const history = useHistory();
     const redirect_url = location.state?.from || '/home'
@@ -26,21 +26,20 @@ const Login = () => {
             <div className="row">
                 <div className="col-md-4 mx-auto my-5">
                     <h3 className="color-b">Healthy Human Medical</h3>
-                    <Form className="my-4">
+                    <Form className="my-4" onSubmit={handleLoginWithEmail}>
                         <Form.Group className="mb-3" controlId="formBasicEmail">
-                            <Form.Control type="email" placeholder="Enter email" />
+                            <Form.Control type="email" placeholder="Enter email" onBlur={handleEmailChange} />
                             <Form.Text className="text-muted">
                                 We'll never share your email with anyone else.
                             </Form.Text>
                         </Form.Group>
 
                         <Form.Group className="mb-3" controlId="formBasicPassword">
-                            <Form.Control type="password" placeholder="Password" />
+                            <Form.Control type="password" placeholder="Password" onBlur={handlePasswordChange} />
                         </Form.Group>
-                        <Button variant="primary" type="submit" className="btn btn-a text-white">
-                            Login {loginBtn}
-                        </Button>
+                        <input type="submit" value="Log In" className="btn btn-a text-white" />
                     </Form>
+                    <p>{error}</p>
                     <br />
                     <p>Or</p>
                     <button className="btn btn-warning" onClick={handleGoogleLogin}>Login with Google</button>
