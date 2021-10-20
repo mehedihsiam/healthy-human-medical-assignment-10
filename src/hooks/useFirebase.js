@@ -10,8 +10,13 @@ const useFirebase = () => {
     const [password, setPassword] = useState('')
     const [error, setError] = useState('')
 
+
+
+    const auth = getAuth()
+
     // collect inputs
     const handleNameChange = (e) => {
+        e.preventDefault()
         setName(e.target.value)
     }
 
@@ -33,26 +38,26 @@ const useFirebase = () => {
         signInWithEmail()
     }
 
-    // firebase Functions
-    const auth = getAuth()
+
 
     // set name
     const userName = () => {
-        updateProfile(auth.currentUser, { displayName: name })
+        updateProfile(auth?.currentUser, { displayName: name })
             .then(result => { })
 
     }
+
+
+    // firebase Functions
 
     // signup with email and password
     const signUpWithEmail = () => {
         createUserWithEmailAndPassword(auth, email, password)
             .then(result => {
                 const user = result.user;
+                userName()
                 setUsers(user)
-            })
-            .catch((error) => {
-                const errorMessege = error.messege;
-                setError(errorMessege)
+                console.log(user)
             })
     }
 
