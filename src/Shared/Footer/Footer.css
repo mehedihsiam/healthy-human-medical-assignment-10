@@ -3,3 +3,18 @@
     bottom: 0px;
     width: 100%;
 }
+
+.footer-container{
+    display: grid;
+    grid-template-columns: 5fr 3.5fr 5fr;
+    column-gap: 35px;
+}
+
+@media only screen and (max-width:770px) {
+    .footer-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 35px;
+    row-gap: 25px;
+}
+}
