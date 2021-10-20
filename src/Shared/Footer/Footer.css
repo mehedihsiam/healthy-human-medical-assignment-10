@@ -10,6 +10,10 @@
     column-gap: 35px;
 }
 
+.footer-about{
+    text-align: justify;
+}
+
 @media only screen and (max-width:770px) {
     .footer-container{
     display: grid;
