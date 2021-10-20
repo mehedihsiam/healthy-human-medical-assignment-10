@@ -28,7 +28,9 @@ const Register = () => {
                     </Form>
                     <br />
                     <p>Or</p>
-                    <button className="btn btn-warning" onClick={signinUsingGoogle}>Signup with Google</button>
+                    {
+                        !users.email && <button className="btn btn-warning" onClick={signinUsingGoogle}>Signup with Google</button>
+                    }
                     {
                         !users.email && <p className="my-4">Already Have an account? <Link to="/login">Login</Link></p>
                     }
